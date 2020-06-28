@@ -83,6 +83,7 @@ section {
 .footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    column-gap: 20px;
 }
 .footer a {
     text-decoration: none;
@@ -92,35 +93,40 @@ section {
     color: #848484;
     transition: 0.5s;
 }
-.copyR {
+.copyR, .copyRmobile {
     color: #848484;
     padding-top: 6vh;
 }
+.copyRmobile {
+    display: none;
+}
 
-
-
-/*
-
-/*Large Desktop*
-@media (min-width:1200px) {
-    
-}
-/*Normal Desktop*
-@media (min-width:1024px) and (max-width:1199px) {
-    
-}
-/*small desktop*
-@media (min-width:980px) and (max-width:1023px) {
-    
-}
-/*For tablet *
-@media (min-width:768px) and (max-width:979px)  {
-    
-}
-/*For Mobile landscape *
-@media (min-width:480px) and (max-width:767px)  {
-    
-}
-/*For Mobile  *
+/*For Mobile  */
 @media (min-width:320px) and (max-width:479px)  {
-}
+    .big {
+        display: block;
+    }
+    .small {
+        display: block;
+    }
+    .small article {
+        padding-bottom: 30px;
+    }
+    .small article:last-of-type {
+        padding-bottom: 0;
+    }
+    .footer {
+        display: block;
+    }
+    .copyR {
+        display: none;
+    }
+    .copyRmobile {
+        display: block;
+    }
+    header {
+        display: none;
+    }
+
+
+
