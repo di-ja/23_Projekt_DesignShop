@@ -188,5 +188,35 @@ section {
         display: block;
         position: relative;
     }
-
-
+}
+/*For Tablet  */
+@media only screen and (min-width:321px) and (max-width:768px)  {
+    .big {
+        display: block;
+    }
+    .small {
+        display: block;
+    }
+    .small article {
+        padding-bottom: 30px;
+    }
+    .small article:last-of-type {
+        padding-bottom: 0;
+    }
+    .footer {
+        display: block;
+    }
+    .copyR {
+        display: none;
+    }
+    .copyRmobile {
+        display: block;
+    }
+    .desktopNav {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        position: relative;
+    }
+}
