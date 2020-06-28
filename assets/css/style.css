@@ -14,6 +14,63 @@ body {
 }
 * {margin:0; padding:0}
 
+/* ------ MobileNav ------ */
+.hamburger {
+    display: none;
+}
+.hamburger input {
+    position: fixed;
+    width: 90px;
+    height: 90px;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+}
+.hamburger div{
+    z-index: 1;
+    opacity: 1;
+}
+.x {
+    position: fixed;
+    color: #fff;
+    font-size: 2rem;
+    top: 28px;
+    right: 26px;
+    display: none;
+}
+.small-menu {
+    position: fixed;
+    right: -110%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 110%;
+    height: 100vh;
+    transition: right 1s;
+}
+.small-menu a {
+    margin-top: 20vh;
+    display: block;
+    color: #fff;
+    text-align: left;
+    font-size: 2rem;
+}
+.small-menu li {
+    list-style: none;
+}
+.hamburger input:checked~.small-menu {
+    right: -26px;
+}
+.hamburger input:checked~div {
+    display: none;
+}
+.hamburger input:checked~.x {
+    display: block;
+}
+
+
+
+/* ------ Basis ------ */
 h1 {
     font-size: 1.2em;
     color: #323A45;
@@ -124,9 +181,12 @@ section {
     .copyRmobile {
         display: block;
     }
-    header {
+    .desktopNav {
         display: none;
     }
-
+    .hamburger {
+        display: block;
+        position: relative;
+    }
 
 
